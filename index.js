@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.status(200).send('Ok');
 });
 
+app.get('/users/4', (req, res) => {
+  res.status(200).send({ name: 'Test' });
+});
+
 const server = http.createServer(app);
 
 server.listen(PORT, () =>
